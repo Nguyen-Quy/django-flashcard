@@ -1,0 +1,7 @@
+{% load cards_tags %}
+<nav>
+    <a href="{% url 'card-list' %}">🗂 All Cards</a>
+    <br>
+    <a href="{% url 'card-review' %}">🗂 Start Review</a>
+    {% comment %} {% boxes_as_links %} {% endcomment %}
+</nav>

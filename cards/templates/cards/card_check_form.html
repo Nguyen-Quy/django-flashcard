@@ -1,0 +1,19 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="card_id" value="{{ card.id }}">
+    {% comment %} <input type="hidden" name="quality" value="{{ quality }}"> {% endcomment %}
+    {% comment %} {% if solved %}
+        <input type="submit" value="✅ I know"/>
+    {% else %}
+        <input type="submit" value="❌ I don't know"/>
+    {% endif %} {% endcomment %}
+    
+    <div>
+        <button style="h4" type="submit" name="quality" value="5">5 - Perfect response</button>
+        <button type="submit" name="quality" value="4">4 - Correct response after hesitation</button>
+        <button type="submit" name="quality" value="3">3 - Correct response with difficulty</button>
+        <button type="submit" name="quality" value="2">2 - Incorrect response; easy recall</button>
+        <button type="submit" name="quality" value="1">1 - Incorrect response; remembered</button>
+        <button type="submit" name="quality" value="0">0 - Complete blackout</button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+Django = "^4.2.4"
+pendulum = "^2.1.2"
+supermemo2 = "^2.0.0"
+pywebview = "^4.3.2"
+pyinstaller = "^5.13.2"
+psycopg2 = "^2.9.7"
+py2exe = "^0.13.0.0"
+auto-py-to-exe = "^2.38.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core", "cards"]
+exclude = []
+namespaces = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
